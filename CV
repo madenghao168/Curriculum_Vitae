@@ -1,0 +1,44 @@
+马登豪15652188296,madenghao@ruc.edu.cn, madenghao5@gmail.com
+
+教育背景与工作经历                                                                      
+• 高级算法工程师，美团，住宿搜索组，2020年7月 - 至今.
+• 博士，中国人民大学，信息学院，导师：陈跃国教授（杜小勇教授团队）， 2016年9月–2020年6月. 
+• 访问学者，美国伊利诺伊大学香槟校区，导师：Kevin Chang，2018年9月–2019年9月. 
+• 联合培养博士，美国伊利诺伊大学香槟校区，导师：Kevin Chang，2017年9月–2018年9月.
+• 硕士，中国人民大学，信息学院，导师：陈跃国教授，计算机应用技术专业，2014年9月–2017年6月.
+• 本科，河南中医药大学，信息学院，信息管理与信息系统专业，2009年9月–2013年6月.
+研究方向与成果列表                                                                  
+研究方向一：问答系统。解决问题匹配中的semantic gap问题。解决途径1）构建结构化知识库，建立词与词之间的语义关系(论文4)；2）Deep query, 深度分析与解析用户查询，例如headword 和modifiers(论文3), 从查询中推理从查询类别（见论文2），建立多级别的查询表示（见论文8）。
+研究方向二：数据挖掘。从用户查询和用户评论中挖掘意图词，解决数据稀疏问题，利用字典的语义增强预训练模型的语义（见论文1）；从社区问答数据中，构建大量的同义查询模版。解决途径：构建查询-答案图，然后在图上进行贝叶斯推理，进而提出了一种新的PMI计算方法（见论文7）。
+研究方向三：个性化推荐。基于行为的用户兴趣建模，从用户的历史点击行为中构建用户的兴趣表示，然后进行预测用户下次可能购买的物品，解决行为稀疏问题，兴趣焦点问题，历史兴趣和当前兴趣差问题。解决途径：用Deep click 扩充点击的语义（见论文9），提出兴趣平滑原理（见论文10）。
+研究成果列表(已经录用)：
+1. Denghao Ma, Yueguo Chen, Changyu Wang, Hongbin Pei, Yitao Zhai, Gang Zheng, Qi Chen. Definition-Augmented Jointly Training Framework for Intention Phrase Mining. DASFAA 2022, CCF B.
+2. Denghao Ma, Yueguo Chen, Xiaoyong Du, Yuanzhe Ha. Interpreting Fine-Grained Categories from Natural Language Queries of Entity Search. DASFAA 2018, CCF B. 
+3. Denghao Ma, Yueguo Chen, Kevin Chen-Chuan Chang, Xiaoyong Du, Chuanfei Xu, Yi Chang. Leveraging Fine-Grained Wikipedia Categories for Entity Search. WWW 2018, CCF A.
+4. Denghao Ma, Yueguo Chen, Jun Chen, Xiaoyong Du. ESearch: Incorporating Text Corpus and Structured Knowledge for Open Domain Entity Search. WWW 2017, CCF A.
+5. 张香玲,陈跃国,马登豪,陈峻,杜小勇. 实体搜索综述. 软件学报 2017, CCF A. 
+6. Mingyan Teng, Denghao Ma, Xiaoyong Du. Maintaining Ranking Lists in Dynamic Virtual Environments.DASFAA 2015, CCF-B. 
+研究成果列表(论文审稿中/写作基本完成)：
+7. Denghao Ma, Kevin Chen-Chuan Chang, Yueguo Chen, Cheng Chen, Chuanfei Xu. A Principled Decomposition of Pointwise Mutual Information for Intention Template Discovery, TKDE 2022 CCF A. (下载https://github.com/Para-Questions/Intention_template_discovery/blob/main/TKDE_Intention_Template_Discovery.pdf)
+8. Li Chong, Denghao Ma*, Yueguo Chen (共同一者). Reusing Keywords for Fine-grained Representations and Matchings. (下载https://github.com/Para-Questions/papers/blob/main/RFM.pdf)
+9. Denghao Ma, Hongbin Pei,Yueguo Chen,Peng Bao,Liang Shen. Deep Clicking Interest Network for Reranking Hotels. (下载https://github.com/Para-Questions/papers/blob/main/IPM_DCIN.pdf)
+10. Denghao Ma, JiajiaSun, Yueguo Chen, Xueran Han, Liang Shen. Two-stage Calibration Network for Interest Modeling in Hotel Search. (下载https://github.com/Para-Questions/papers/blob/main/DASFAA2023_TCN_20221024.pdf)
+工程与项目经历                                                                              
+工程技能：熟悉企业排序系统整体架构，以及如何进行分层优化；能够快速把想法和论文进行工程业务落地应用；熟悉Java与Tensorflow编程框架；能够搭建分布式集群训练与共享平台。
+• 工程项目一，酒店知识图谱构建(美团工作)
+1．任务1：标签挖掘。从用户查询和商品评价中挖掘意图词。核心挑战：词稀疏导致无法学习丰富的语义表示。第一：我们通过搜集大量的文本数据，重新训练词粒度BERT模型。第二：我们从字典中抽取词的定义，然后构建基于定义的语义表示。结合BERT语义和基于定义的语义作为词的整体语义。在整体语义的基础之上，我们设计联合训练模型来捕获标签的三个属性。
+2．任务2：同义词挖掘。从大量的意图词中识别同义词。基于任务1中的整体语义表示，我们构建很多手工特征，例如基于统计的特征（上下文共现，POI共现等等），基于pattern的特征，基于词性的特征。然后我们采用分类的方法来识别同义词。
+3．任务3 : 对商品进行打标签. 已知标签集合和商品集合，建立标签和商品的关联。首先，构建商品的语义表示，我们从商品的属性，下单用户的查询，用户评论，CTR和CVR等角度构建商品的语义表示。然后从知识图谱中学习标签的语义表示。最后利用分类策略评判标签和商品的相关性。
+• 工程项目二，酒店个性化推荐排序(美团工作)。酒店个性化排序依赖于用户的个性化特征。
+任务：基于行为的用户兴趣建模. 从用户的行为序列中，构建用户的兴趣表示，用于酒店排序。 
+挑战：1）点击稀疏性导致无法为点击构建丰富的语义；2）历史兴趣和当前兴趣之间存在差异，历史点击来自于历史兴趣，用历史点击构建当前兴趣必然遭遇兴趣差挑战. 
+方法：我们提出深度点击概念来扩展每个点击的语义，进而降低稀疏性造成的影响。深度点击定义为一个结构体<酒店ID，曝光内容，后续反馈，上下文>；为了解决兴趣差挑战，我们提出了兴趣平滑原理：历史兴趣+平滑因子=当前兴趣，开发了兴趣平滑网络模型。
+• 业务效果：知识图谱项目已经在美团-住宿应用中落地；个性化排序项目，从2021年8月到2022年5月成为美团-住宿搜索L2主模型，即对候选酒店进行排序，获得每天增加了6743酒店订单。具体效果如下图：近地铁，学校周边等词属于知识图谱项目；展示列表的排序属于个性化推荐排序项目。
+所获奖励                                                                                                                                                                                                                                                 • 2018: 中国人民大学拔尖创新人才培养奖学金；
+• 2018: 中国人民大学博士生国家奖学金；
+• 2017: 美国伊利诺伊大学香槟校区访问学者奖学金；
+• 2017: 中国公派留学奖学金；
+• 2017: 中国人民大学拔尖创新人才培养奖学金.
+• 2013: 河南中医药大学优秀毕业生.
+• 2010: 河南中医药大学国家励志奖学金.
+
